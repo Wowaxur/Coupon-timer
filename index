@@ -1,0 +1,36 @@
+<section 
+		<div class="coupon">
+    <div class="container" style="background-color:white">  </div>
+		<style>.coupon {
+  border: 5px dotted #bbb; /* Dotted border */
+  width: 100%; 
+  border-radius: 10px; /* Rounded border */
+  margin: 0 auto; /* Center the coupon */
+  max-width: 600px;
+  background-color: #FFFF00;
+  padding-right:0;
+ padding-left:0;
+}.countdown-block{text-align:center;color:#fff;padding:10px 0;margin-left:-10px;margin-right:-10px}.countdown-block>h3{font-weight:800;font-size:36px;padding-top:5px;margin:0}.countdown-container{max-width:320px;text-align:center;margin:0 auto;padding-bottom:10px}.countdown-container .redd{color:red;font-weight:800;font-size:30px;margin:0 auto 20px}.countdown-container h3{color:#000;margin:0 auto;text-transform:uppercase;font-weight:700;font-size:18px;font-family:Roboto}.countdown{display:flex;justify-content:center;align-items:center;font-weight:300;font-size:39px;line-height:1}.countdown-item{color:red;width:5rem;font-weight:800}.countdown-divider{color:#000;width:1rem}.countdown-text{margin:0 auto;margin-bottom:-8px;width:90%;color:#000;font-size:1rem;font-weight:700;display:flex;justify-content:center;align-items:center;text-transform:uppercase;font-family:Roboto}.countdown-text span{width:4rem;margin-right:2rem}.countdown-text span:last-child{margin-right:0}.best-form{font:16px/1.2 "Arial";padding:16px;color:#fff;background-image:linear-gradient(to top,#d1f0ff,#e9f8ff);margin-left:-10px;margin-right:-10px}.best-form>.wrap{max-width:310px;margin:0 auto}.product{display:flex;margin-bottom:15px}.product .left{width:50%}.product .right{width:50%;text-align:center;font-family:Roboto}.product .discount{background-image:linear-gradient(to right,#ff0,#ffeb3b);color:red;border-radius:10px;transform:skew(-15deg);font-size:3.5rem;font-weight:700;font-style:italic;text-align:center;width:85%;height:5rem;line-height:5rem;letter-spacing:-3px;margin-top:-.3rem}.product .discount div{transform:skew(15deg)}.product .price{color:#ed1b24;font-size:68px;font-weight:700;letter-spacing:-1px;line-height:1}.product .discount-text{margin-top:1rem;color:#000;font-size:18px}.product .price span{font-weight:300;font-size:50%;margin-left:5px}.product .price-old{line-height:1}.product .price-old span{display:inline-block;padding:0 1rem;font-size:44px;color:#000;position:relative;font-weight:bold}.product .price-old span:before{position:absolute;content:"";left:0;top:45%;right:0;border-top:5px solid #ed1b24;transform:rotate(-10deg)}.country-input,.name-input,.phone-input{color:#000;background:#fff;width:100%;border:1px solid #544c4c;box-sizing:border-box;font-size:20px;margin-bottom:10px;display:flex;transition:all .15s ease-in-out}.name-input input,.phone-input input{flex:1 1 auto;border:0;padding:0;font:inherit;color:inherit;box-sizing:border-box;min-width:0;padding:10px 15px;border-radius:6px}.button-submit:focus,.name-input:focus-within,.phone-input:focus-within{outline:0;box-shadow:0 0 0 4px #bdab3c}.name-input:focus-within input,.phone-input:focus-within input{outline:0}.name-input .country{border-radius:3px;vertical-align:-2px}.name-input label,.phone-input label{align-self:center;padding-left:15px;width:50px;font-weight:bold;margin-bottom:0}.button-submit{text-align:center;display:flex;box-sizing:border-box!important;width:100%;margin:15px auto;text-decoration:none;text-transform:uppercase;line-height:1;color:#544c4c;box-shadow:0 0 10px rgba(0,0,0,.4);border-radius:6px;border:0;padding:14px 0;background-image:linear-gradient(to top,#d8b81b,#fff080);cursor:pointer;font:24px/1.4 "Open Sans",sans-serif;font-weight:400}.button-submit:hover{transform:scale(1.1)}.button-submit-text{color:#544c4c;flex:1 1 auto;font:inherit;font-weight:bold}.button-submit-arrow{width:0;height:0;border-top:.6rem solid transparent;border-bottom:.6rem solid transparent;border-left:1rem solid #fff;margin-right:1rem}.ord_button{background-color:#5d9d52;color:#fff!important;display:inline-block;padding:10px 30px;font-size:25px!important;box-shadow:2px 3px 8px #999;text-decoration:none!important;border-radius:8px;border:3px solid #fff;margin:20px 0 30px;line-height:27px;text-transform:uppercase;transition:all .3s ease-in 0s}.ord_button:hover{background-color:#5d9d52;box-shadow:2px 3px 3px #999;text-decoration:none!important;transform:scale(1.1)}
+</style>
+<div class="countdown-block">
+<div class="countdown-container">
+<h3 class="redd">50% DISCOUNT</h3>
+<h3>LIMITED TIME OFFER WITH FREE SHIPPING</h3>
+<div class="countdown">
+<div class="countdown-item" id="hour1"></div>
+<div class="countdown-divider">:</div>
+<div class="countdown-item" id="min1"></div>
+<div class="countdown-divider">:</div>
+<div class="countdown-item" id="sec1"></div>
+</div> 
+<div class="countdown-text">
+<span>Hours</span>
+<span>Minutes</span>
+<span>Seconds</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<script>var d=new Date(),month=new Array("Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember");var timeIs=new Date();var sec=59-timeIs.getSeconds();var min=59-timeIs.getMinutes();var hour=23-timeIs.getHours();function refresh(){sec--;if(sec==-01){sec=59;min=min-1;}else{min=min;}if(sec<=9){sec="0"+sec;}if(min==-01){min=59;hour=hour-1;}else{hour=hour;}if(document.getElementById){hour1.innerHTML=(hour<=9?"0"+hour:hour);min1.innerHTML=(min<=9?"0"+min:min);sec1.innerHTML=sec;}inter=setTimeout(refresh,1000);if(hour=='00'&&min=='00'&&sec=='00'){sec="00";clearInterval(inter);}}refresh();$(document).ready(function(){$('.date').text(d.getDate()+' '+month[d.getMonth()]);})
+</script>
